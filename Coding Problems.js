@@ -90,3 +90,12 @@ function findMax(arr){
     return min;
 }
 
+8.
+function runningArray(arr) {
+    let count = 0;
+    for (let i = 1; i < arr.length; i++) {
+        arr[i] = arr[i] + arr[i - 1];
+        
+    }
+    return arr;
+}
