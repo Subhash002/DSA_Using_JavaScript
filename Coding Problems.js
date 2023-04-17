@@ -118,3 +118,91 @@ const product = {
 };
 
 product.printProduct();
+
+9.
+class transport{
+
+    constructor(){
+        this.typeName = "";
+        this.wheels = 0;
+        this.maxSpeed = 0;
+    }
+}
+
+class car extends transport{
+    constructor(){
+        super();
+        this.fuel = 0;
+    }
+}
+
+var car1 = new car();
+car1.wheels = 4;
+car1.typeName = "car";
+car1.maxSpeed = 200;
+car1.fuel = 40;
+
+console.log(car);
+
+10.
+PIVOT INDEX
+var pivotIndex = function(nums) {
+    const sumWithInitial = nums.reduce((accumulator, currentValue) => accumulator + currentValue,
+  0
+);
+let leftSum=0;
+let rightSum=sumWithInitial;
+for(let i=0;i<nums.length;i++){
+    rightSum=rightSum-nums[i];
+    if(rightSum===leftSum) return i;
+    leftSum+=nums[i] 
+
+}
+return -1;
+
+};
+
+11.
+
+class Stack{
+    constructor(){
+        this.stack = [];
+    }
+
+    push(val){
+        this.stack.push(val);
+    }
+
+    pop(){
+        return this.stack.pop();
+    }
+
+    print(){
+        console.log(this.stack);
+    }
+
+peek(){
+        return this.stack[this.stack.length - 1];
+    }
+    isEmpty(){
+        return this.stack.length == 0;
+    }
+
+    size(){
+        return this.stack.length;
+    }
+
+
+}
+
+var s = new Stack();
+s.push(1);
+s.push(2);
+s.push(3);
+s.print();
+s.pop();
+s.print();
+s.pop();
+s.print();
+
+12.STACK USING NODE
