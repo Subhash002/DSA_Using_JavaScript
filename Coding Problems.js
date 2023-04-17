@@ -99,3 +99,22 @@ function runningArray(arr) {
     }
     return arr;
 }
+
+8. Objects
+const product = {
+    productName: "Computer",
+
+    get prod(){
+        return this.productName;
+    },
+
+    set prod(prod){
+        this.productName = prod;
+    },
+
+    printProduct: function(){
+        console.log(this.productName);
+    }
+};
+
+product.printProduct();
