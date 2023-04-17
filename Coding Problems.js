@@ -57,8 +57,36 @@ console.log(arr1);
 
 
 
+4. Finding missing value from sorted array
+function subsMiss(arr) {
+    let n=arr[arr.length-1]
+    findSum = n*(n+1) / 2;
+    arraySum = arr.reduce((accumulator,currentValue)=>accumulator + currentValue, 0);
+    if(findSum-arraySum===0) return 'NO MISSING TERM'
+    else return `Missting Term : ${findSum-arraySum}`;
+}
 
+5. Find max of array
 
+function findMax(arr){
+    let max = arrj[0];
+    for(let i=1;i<arr.length;i++){
+     if(arr[i] > max){
+         max = arr[i];
+     }   
+    }
+    return max;
+}
 
+7. Find min of array
 
+function findMax(arr){
+    let min = arrj[0];
+    for(let i=1;i<arr.length;i++){
+     if(arr[i] < max){
+         min = arr[i];
+     }   
+    }
+    return min;
+}
 
