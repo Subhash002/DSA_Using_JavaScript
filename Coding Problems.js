@@ -206,3 +206,21 @@ s.pop();
 s.print();
 
 12.STACK USING NODE
+
+13. Stack -GOOD STRING-
+  In “Make The String Great” problem a string is given consists of lower and upper case letters. We have to make this string good by removing adjacent characters in the string which is making the string bad.
+A good string is a string which doesn’t have two adjacent characters where both the characters are same but of different case. We can do this operation any number of times to make the string good.
+  /**
+ * @param {string} s
+ * @return {string}
+ */
+var makeGood = function(str) {
+    const stack=[];
+    for(const c of str){
+      let last =stack.at(-1);
+      if(last && c!==last && last.toLowerCase()===c.toLowerCase()) stack.pop();
+      else stack.push(c);
+  
+    }
+    return stack.join('');
+};
