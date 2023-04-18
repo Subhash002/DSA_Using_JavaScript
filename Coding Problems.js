@@ -303,3 +303,20 @@ var mergeAlternately = function(word1, word2) {
     }
     return results.join('');
 };
+
+Other Methods-
+  function alternateNew2(word1, word2) {
+    let results = [];
+    let run = 0;
+    let warray1 = word1.split('')
+    let warray2 = word2.split('')
+    while ((warray1.length > warray2.length) ? warray1.length : warray2.length > run) {
+        for (var i = 0; i < warray2.length; i++) {
+            results.push([warray1[i], warray2[i]]);
+             run++;
+        }
+
+       
+    }
+    return results.flat().join('');
+}
