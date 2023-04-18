@@ -345,3 +345,37 @@ var createCounter = function(n) {
  * counter() // 11
  * counter() // 12
  */
+
+2621. Sleep
+Easy
+73
+2
+Companies
+Given a positive integer millis, write an asyncronous function that sleeps for millis milliseconds. It can resolve any value.
+
+ 
+
+Example 1:
+
+Input: millis = 100
+Output: 100
+Explanation: It should return a promise that resolves after 100ms.
+let t = Date.now();
+sleep(100).then(() => {
+  console.log(Date.now() - t); // 100
+});
+/**
+ * @param {number} millis
+ */
+async function sleep(millis) {
+    return new Promise(function(resolve,reject){
+        setTimeout(function(){
+            resolve(millis)
+        },millis)
+    })
+}
+
+/** 
+ * let t = Date.now()
+ * sleep(100).then(() => console.log(Date.now() - t)) // 100
+ */
