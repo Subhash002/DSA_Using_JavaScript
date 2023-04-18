@@ -273,3 +273,33 @@ var map = function(arr, fn) {
     }
     return newArray;
 };
+
+1768. Merge Strings Alternately
+Easy
+1.3K
+21
+Companies
+You are given two strings word1 and word2. Merge the strings by adding letters in alternating order, starting with word1. If a string is longer than the other, append the additional letters onto the end of the merged string.
+/**
+ * @param {string} word1
+ * @param {string} word2
+ * @return {string}
+ */
+var mergeAlternately = function(word1, word2) {
+  
+    let results = [];
+    let run = 0;
+    let warray1 = word1.split('')
+    let warray2 = word2.split('')
+   
+    while (warray1.length > run || warray2.length > run) {
+        if (warray1[run]) {
+            results.push(warray1[run]);
+        }
+        if (warray2[run]) {
+            results.push(warray2[run]);
+        }
+        run++;
+    }
+    return results.join('');
+};
