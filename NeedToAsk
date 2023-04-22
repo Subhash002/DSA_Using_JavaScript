@@ -1,4 +1,6 @@
 Below rotating array giveing wrong output in LeetCode IDE-
+
+LEETCODE-https://leetcode.com/problems/rotate-array/
 function arrayRotateUpdated(arr,k){
     let leftArray=arr.slice(0,arr.length-k);
     let rightArray=arr.slice(arr.length-k,arr.length);
